@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "10b1668d-a057-4371-a52d-6c8171a13cd9",
+		"name": "Hami_Project_Apis",
+		"description": "exported all urls with their different methods in the project ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "root api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "nasim",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				},
+				"description": "root api calling. which is redirected to login page and get the\nusername and password of a signed up user and return jwt token"
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup",
+						""
+					]
+				},
+				"description": "signup in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				},
+				"description": "login to the system"
+			},
+			"response": []
+		},
+		{
+			"name": "get blogs information",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InVzZXIxIiwiZXhwIjoxNTg2NDczMzQxLCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NDY5NzQxfQ.vRluhieV0rCARYCwz82PjQcWmk44jq-1MwIgCiKbfCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog_api",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog_api"
+					]
+				},
+				"description": "get(read) blogs information by authenticated users"
+			},
+			"response": []
+		},
+		{
+			"name": "create blog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InVzZXIxIiwiZXhwIjoxNTg2NDczMzQxLCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NDY5NzQxfQ.vRluhieV0rCARYCwz82PjQcWmk44jq-1MwIgCiKbfCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "whoever",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "09127389965",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "new.fighting.for.goal@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "No.12 , Shahrakshohada Street\nAlghadir Sq. , Shahrziba",
+							"type": "text"
+						},
+						{
+							"key": "purchase",
+							"value": "mobile",
+							"type": "text"
+						},
+						{
+							"key": "purchase_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "datetime",
+							"value": "2022-09-08T03:09:00Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog_api/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog_api",
+						""
+					]
+				},
+				"description": "an authenticated user can create a blog"
+			},
+			"response": []
+		},
+		{
+			"name": "update blog information",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InVzZXIxIiwiZXhwIjoxNTg2NDczMzQxLCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NDY5NzQxfQ.vRluhieV0rCARYCwz82PjQcWmk44jq-1MwIgCiKbfCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "whoever",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "09127389965",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "new.fighting.for.goal@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "No.12 , Shahrakshohada Street\nAlghadir Sq. , Shahrziba",
+							"type": "text"
+						},
+						{
+							"key": "purchase",
+							"value": "mobile",
+							"type": "text"
+						},
+						{
+							"key": "purchase_id",
+							"value": "80",
+							"type": "text"
+						},
+						{
+							"key": "datetime",
+							"value": "2022-09-08T03:09:00Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog_api/5/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog_api",
+						"5",
+						""
+					]
+				},
+				"description": "an authenticated user can update a blog's information with \ncalling an api like this :\nhttp://127.0.0.1:8000/blog_api/<int : blog_id>/"
+			},
+			"response": []
+		},
+		{
+			"name": "partial_update blog information",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InVzZXIxIiwiZXhwIjoxNTg2NDczMzQxLCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NDY5NzQxfQ.vRluhieV0rCARYCwz82PjQcWmk44jq-1MwIgCiKbfCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "whoever",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "09127389965",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "new.fighting.for.goal@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "No.12 , Shahrakshohada Street\nAlghadir Sq. , Shahrziba",
+							"type": "text"
+						},
+						{
+							"key": "purchase",
+							"value": "mobile",
+							"type": "text"
+						},
+						{
+							"key": "purchase_id",
+							"value": "80",
+							"type": "text"
+						},
+						{
+							"key": "datetime",
+							"value": "2022-09-08T03:09:00Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog_api/5/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog_api",
+						"5",
+						""
+					]
+				},
+				"description": "an authenticated user can partially update a blog's information with \ncalling an api like this :\nhttp://127.0.0.1:8000/blog_api/<int : blog_id>/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete blog",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InVzZXIxIiwiZXhwIjoxNTg2NDczMzQxLCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NDY5NzQxfQ.vRluhieV0rCARYCwz82PjQcWmk44jq-1MwIgCiKbfCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "whoever",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "09127389965",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "new.fighting.for.goal@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "No.12 , Shahrakshohada Street\nAlghadir Sq. , Shahrziba",
+							"type": "text"
+						},
+						{
+							"key": "purchase",
+							"value": "mobile",
+							"type": "text"
+						},
+						{
+							"key": "purchase_id",
+							"value": "80",
+							"type": "text"
+						},
+						{
+							"key": "datetime",
+							"value": "2022-09-08T03:09:00Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog_api/5/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog_api",
+						"5",
+						""
+					]
+				},
+				"description": "an authenticated user can delete a blog with calling\nan api like this :\nhttp://127.0.0.1:8000/blog_api/<int : blog_id>/"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
