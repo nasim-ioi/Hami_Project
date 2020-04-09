@@ -1,0 +1,4 @@
+.vscode/
+TestProject/BlogApp/migrations/!__init__.py
+TestProject/db.sqlite3
+
