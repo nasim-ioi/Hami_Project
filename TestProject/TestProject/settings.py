@@ -78,6 +78,10 @@ REST_FRAMEWORK = {
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
+
+    'DEFAULT_THROTTLE_RATES': {
+        'user': '10/minute'
+    }
 }
 
 JWT_AUTH = {
