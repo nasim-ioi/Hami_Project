@@ -22,7 +22,7 @@ the postman for testing all urls and description of their opreations, with diffe
 
 After cloning the project you can run that on your local environment.To do this :
 
-    1. run "pipenv install" to install required packeages.
+    1. run "pipenv install" to install required packeages and run "pipenv shell" to activate the virtual environment.
     
     2. move to this path Hami_Project/TestProject/ and run "python manage.py makemigrations" and "python manage.py migrate" 
        to create tables in the database.
