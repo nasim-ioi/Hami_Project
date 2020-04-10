@@ -3,7 +3,8 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.throttling import UserRateThrottle
 from rest_framework import status
 
 from .models import Blog
@@ -45,6 +46,9 @@ class BlogViewSet(ModelViewSet):
 
     # only athenticated users(which have logged in) can create, read, update or delete their blog
     permission_classes = [IsAuthenticated]
+
+    # each authenticated user can up to 10 rates in a minute request to this view
+    throttle_classes = [UserRateThrottle]
 
     queryset = Blog.objects.all()
 
