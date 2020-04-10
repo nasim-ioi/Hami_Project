@@ -11,13 +11,13 @@ the postman for testing all urls and description of their opreations, with diffe
 ## requirements:
 
 
-  python version : 3.7.5
+  - python version : 3.7.5
   
-  Django : 2.2
+  - Django : 2.2
   
-  djangorestframework : 3.9
+  - djangorestframework : 3.9
   
-  djangorestframework-jwt : 1.11.0
+  - djangorestframework-jwt : 1.11.0
 
 
 After cloning the project you can run that on your local environment.To do this :
