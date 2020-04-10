@@ -1,15 +1,10 @@
 # Description
-this project is a RestApi system with CRUD opreation on the Blog model only by authenticated users
-(who have signed up and logged in to the system by calling http://127.0.0.1:8000/signup/ and http://127.0.0.1:8000/login/)
+> this project is a RestApi system with CRUD opreation on the Blog model only by authenticated users
+(who have signed up and logged in to the system by calling `http://127.0.0.1:8000/signup/` and `http://127.0.0.1:8000/login/`)
 Also this project has document that includes UML Diagram and postman_export_apis json file which can be imported and run in
 the postman for testing all urls and description of their opreations, with differrent methods, are included in this file.
 
-
-# Installation
- 
-
 ## requirements:
-
 
   - python version : 3.7.5
   
@@ -19,14 +14,31 @@ the postman for testing all urls and description of their opreations, with diffe
   
   - djangorestframework-jwt : 1.11.0
 
+## Setup
+ 
+The first thing to do is cloning the repository:
 
-After cloning the project you can run that on your local environment.To do this :
+```
+git clone https://github.com/nasim-ioi/Hami_Project.git
+cd Hami_Project
+```
 
-    1. run "pipenv install" to install required packeages and run "pipenv shell" to activate the virtual environment.
-    
-    2. move to this path Hami_Project/TestProject/ and run "python manage.py makemigrations" and "python manage.py migrate" 
-       to create tables in the database.
-    
-    3. then run "python manage.py runserver" to run the server and call your desired api from Browser or Postman.
-       Also you can create an admin to see the Django-Pannel by run "python manage.py createsuperuser" command.
+to install dependent packages and activate the virtual environment shell, run the below commands:
+
+```
+pipenv install
+pipenv shell
+```
+
+to config and create tables in the database, run the below commands:
+
+```
+cd TestProject
+python manage.py makemigrations
+python manage.py migrate
+```
+
+to run the project's server use the following command:
+```
+python manage.py runserver
   
