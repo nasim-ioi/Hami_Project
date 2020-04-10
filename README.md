@@ -20,11 +20,12 @@ the postman for testing all urls and description of their opreations, with diffe
   djangorestframework-jwt : 1.11.0
 
 
-After clone the project you can run that on your local environment.To do this :
+After cloning the project you can run that on your local environment.To do this :
 
-    1. run "pipenv install" to install required packeages.
+    1. run "pipenv install" to install required packeages and run "pipenv shell" to activate the virtual environment.
     
-    2. move to this path Hami_Project/TestProject/ and run "python manage.py migrate" to create tables in the database
+    2. move to this path Hami_Project/TestProject/ and run "python manage.py makemigrations" and "python manage.py migrate" 
+       to create tables in the database.
     
     3. then run "python manage.py runserver" to run the server and call your desired api from Browser or Postman.
        Also you can create an admin to see the Django-Pannel by run "python manage.py createsuperuser" command.
